@@ -31,10 +31,10 @@ public class TeleOpBasic extends LinearOpMode {
             previousGamepad2.copy(currentGamepad2);
             currentGamepad1.copy(gamepad1);
             currentGamepad2.copy(gamepad2);
-            if (currentGamepad1.a && !previousGamepad1.left_bumper) {
+            if (currentGamepad1.left_bumper && !previousGamepad1.left_bumper) {
                 arm.rotate(.1f);
             }
-            if (!currentGamepad1.b && previousGamepad1.right_bumper) {
+            if (!currentGamepad1.right_bumper && previousGamepad1.right_bumper) {
                 arm.rotate(-.1f);
             }
             drive.move(y,x,rx);
