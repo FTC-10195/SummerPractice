@@ -4,12 +4,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class Drive {
+public class MecanumDrive {
     DcMotor frontLeftMotor;
     DcMotor backLeftMotor;
     DcMotor frontRightMotor;
     DcMotor backRightMotor;
-    public Drive(HardwareMap hardwareMap) {
+    public MecanumDrive(HardwareMap hardwareMap) {
         // Declare our motors
         // Make sure your ID's match your configuration
         frontLeftMotor = hardwareMap.dcMotor.get("frontLeftMotor");
@@ -23,7 +23,7 @@ public class Drive {
         frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
     }
-void move(double y, double x, double rx){
+public void move(double y, double x, double rx){
     // Denominator is the largest motor power (absolute value) or 1
     // This ensures all the powers maintain the same ratio,
     // but only if at least one is out of the range [-1, 1]
