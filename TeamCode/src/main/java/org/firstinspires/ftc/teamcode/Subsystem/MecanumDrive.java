@@ -32,7 +32,6 @@ public void move(double y, double x, double rx){
     double backLeftPower = (y - x + rx) / denominator;
     double frontRightPower = (y - x - rx) / denominator;
     double backRightPower = (y + x - rx) / denominator;
-
     frontLeftMotor.setPower(frontLeftPower);
     backLeftMotor.setPower(backLeftPower);
     frontRightMotor.setPower(frontRightPower);
