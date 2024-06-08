@@ -12,10 +12,10 @@ public class MecanumDrive {
     public MecanumDrive(HardwareMap hardwareMap) {
         // Declare our motors
         // Make sure your ID's match your configuration
-        frontLeftMotor = hardwareMap.dcMotor.get("frontLeftMotor");
-        backLeftMotor = hardwareMap.dcMotor.get("backLeftMotor");
-        frontRightMotor = hardwareMap.dcMotor.get("frontRightMotor");
-        backRightMotor = hardwareMap.dcMotor.get("backRightMotor");
+        frontLeftMotor = hardwareMap.dcMotor.get("motor0");
+        backLeftMotor = hardwareMap.dcMotor.get("motor2");
+        frontRightMotor = hardwareMap.dcMotor.get("motor1");
+        backRightMotor = hardwareMap.dcMotor.get("motor3");
         // Reverse the right side motors. This may be wrong for your setup.
         // If your robot moves backwards when commanded to go forwards,
         // reverse the left side instead.
