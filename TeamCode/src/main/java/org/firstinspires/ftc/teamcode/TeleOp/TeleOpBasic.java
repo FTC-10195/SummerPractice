@@ -14,7 +14,7 @@ public class TeleOpBasic extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         MecanumDrive drive = new MecanumDrive(hardwareMap);
-        Arm arm = new Arm(hardwareMap);
+       // Arm arm = new Arm(hardwareMap);
         Gamepad currentGamepad1 = new Gamepad();
         Gamepad currentGamepad2 = new Gamepad();
 
@@ -32,10 +32,10 @@ public class TeleOpBasic extends LinearOpMode {
             currentGamepad1.copy(gamepad1);
             currentGamepad2.copy(gamepad2);
             if (currentGamepad1.left_bumper && !previousGamepad1.left_bumper) {
-                arm.rotate(.1f);
+             //   arm.rotate(.1f);
             }
             if (!currentGamepad1.right_bumper && previousGamepad1.right_bumper) {
-                arm.rotate(-.1f);
+            //    arm.rotate(-.1f);
             }
             drive.move(y,x,rx);
         }
