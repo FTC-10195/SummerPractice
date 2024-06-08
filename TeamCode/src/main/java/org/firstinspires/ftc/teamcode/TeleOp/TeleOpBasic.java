@@ -14,7 +14,7 @@ public class TeleOpBasic extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         MecanumDrive drive = new MecanumDrive(hardwareMap);
-       // Arm arm = new Arm(hardwareMap);
+       // Arm arm = new Arm(hardwareMap);1
         Gamepad currentGamepad1 = new Gamepad();
         Gamepad currentGamepad2 = new Gamepad();
 
