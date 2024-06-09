@@ -45,7 +45,7 @@ public void move(double y, double x, double rx){
     // Rotate the movement direction counter to the bot's rotation
     double rotX = x * Math.cos(-botHeading) - y * Math.sin(-botHeading);
     double rotY = x * Math.sin(-botHeading) + y * Math.cos(-botHeading);
-    double sensitivity = .5;
+    double sensitivity = 1;
     double denominator = Math.max(Math.abs(rotY) + Math.abs(rotX) + Math.abs(rx), 1);
     double frontLeftPower = ((rotY + rotX + rx) / denominator)*sensitivity;
     double backLeftPower = ((rotY - rotX + rx) / denominator)*sensitivity;
