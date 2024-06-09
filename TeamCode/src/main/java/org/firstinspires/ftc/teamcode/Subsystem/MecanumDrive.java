@@ -21,8 +21,8 @@ public class MecanumDrive {
         // reverse the left side instead.
         // See the note about this earlier on this page.
         frontLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        //frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        //backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        backLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 public void move(double y, double x, double rx){
     // Denominator is the largest motor power (absolute value) or 1
@@ -34,8 +34,8 @@ public void move(double y, double x, double rx){
     double frontRightPower = (y - x - rx) / denominator;
     double backRightPower = (y + x - rx) / denominator;
     frontLeftMotor.setPower(frontLeftPower);
-    //backLeftMotor.setPower(backLeftPower);
-    //frontRightMotor.setPower(frontRightPower);
-    //backRightMotor.setPower(backRightPower);
+    backLeftMotor.setPower(backLeftPower);
+    frontRightMotor.setPower(frontRightPower);
+    backRightMotor.setPower(backRightPower);
 }
 }
