@@ -24,13 +24,12 @@ public class TeleOpBasic extends LinearOpMode {
         if (isStopRequested()) return;
 
         while (opModeIsActive()) {
-            double y = (Math.pow(-gamepad1.left_stick_y, 3));
-            double x = (Math.pow(-gamepad1.left_stick_x *1.1, 3)); // Counteract imperfect strafing
-            double rx = (Math.pow(-gamepad1.right_stick_x, 3));
-
-            if (gamepad1.start) {
-                drive.resetYaw();
-            }
+            double y = -gamepad1.left_stick_y;
+            double x =  gamepad1.left_stick_x * 1.1; // Counteract imperfect strafing
+            double rx = gamepad1.right_stick_x;
+          //  double y  = (Math.pow(-gamepad1.left_stick_y, 3));
+          //  double x =  (Math.pow(gamepad1.left_stick_x *1.1, 3)); // Counteract imperfect strafing
+          //  double rx = (Math.pow(gamepad1.right_stick_x, 3));
 
           //  previousGamepad1.copy(currentGamepad1);
           //  previousGamepad2.copy(currentGamepad2);
