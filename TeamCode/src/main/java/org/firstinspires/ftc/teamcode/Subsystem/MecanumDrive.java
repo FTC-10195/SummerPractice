@@ -32,7 +32,7 @@ public class MecanumDrive {
         // Adjust the orientation parameters to match your robot
         IMU.Parameters parameters = new IMU.Parameters(new RevHubOrientationOnRobot(
                 RevHubOrientationOnRobot.LogoFacingDirection.UP,
-                RevHubOrientationOnRobot.UsbFacingDirection.RIGHT));
+                RevHubOrientationOnRobot.UsbFacingDirection.FORWARD));
         // Without this, the REV Hub's orientation is assumed to be logo up / USB forward
         imu.initialize(parameters);
     }
@@ -46,7 +46,7 @@ public void move(double y, double x, double rx){
     double rotX = x * Math.cos(-botHeading) - y * Math.sin(-botHeading);
     double rotY = x * Math.sin(-botHeading) + y * Math.cos(-botHeading);
     double sensitivity = .5;
-    double denominator = Math.max(Math.abs(y) + Math.abs(x) + Math.abs(rx), 1);
+    double denominator = Math.max(Math.abs(rotY) + Math.abs(rotX) + Math.abs(rx), 1);
     double frontLeftPower = ((rotY + rotX + rx) / denominator)*sensitivity;
     double backLeftPower = ((rotY - rotX + rx) / denominator)*sensitivity;
     double frontRightPower = ((rotY - rotX - rx) / denominator)*sensitivity;
