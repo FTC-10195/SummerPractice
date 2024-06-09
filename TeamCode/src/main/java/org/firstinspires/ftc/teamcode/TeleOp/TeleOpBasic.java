@@ -1,9 +1,12 @@
 package org.firstinspires.ftc.teamcode.TeleOp;
+
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.Gamepad;
 
 import org.firstinspires.ftc.teamcode.Subsystem.MecanumDrive;
-import org.firstinspires.ftc.teamcode.Subsystem
+import org.firstinspires.ftc.teamcode.Subsystem.Arm;
+
 @TeleOp
 public class TeleOpBasic extends LinearOpMode {
     // Declare our motors
